@@ -1,0 +1,352 @@
+/* =========================
+   BASIC STYLING
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+header {
+    background-color: #111;
+    padding: 20px 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    margin: 0;
+    color: white;
+}
+
+nav div {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+
+/* =========================
+   HERO SECTION
+   ========================= */
+
+#hero {
+    min-height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+#hero h1 {
+    font-size: 60px;
+    margin: 10px 0;
+}
+
+#hero h2 {
+    margin: 10px 0;
+}
+
+#hero p {
+    max-width: 600px;
+    margin: 15px auto;
+}
+
+#hero a {
+    display: inline-block;
+
+    margin-top: 20px;
+    padding: 12px 25px;
+
+    background-color: #111;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+}
+
+#hero a:hover {
+    background-color: #333;
+}
+
+#hero img {
+    width: 180px;
+    height: 180px;
+
+    border-radius: 30%;
+
+    object-fit: cover;
+
+    border: 4px solid #111;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+   ========================= */
+
+#about,
+#skills,
+#projects,
+#contact {
+    padding: 70px 50px;
+}
+
+#about h2,
+#skills h2,
+#projects h2,
+#contact h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   ABOUT SECTION
+   ========================= */
+
+#about {
+    background-color: white;
+}
+
+#about p {
+    max-width: 800px;
+    margin: 15px auto;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   SKILLS SECTION
+   ========================= */
+
+#skills > div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#skills > div > div {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 200px;
+
+    padding: 25px;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+#skills > div > div:hover {
+    background-color: #eafcff;
+}
+
+#skills h3 {
+    margin-top: 0;
+}
+
+
+/* =========================
+   PROJECTS SECTION
+   ========================= */
+
+#projects {
+    background-color: white;
+}
+
+#projects > div {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+#projects > div > div {
+    padding: 25px;
+
+    background-color: #f4f4f4;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+#projects > div > div:hover {
+    background-color: #eafcff;
+}
+
+#projects h3 {
+    margin-top: 0;
+}
+
+#projects a {
+    display: inline-block;
+
+    margin-top: 10px;
+    padding: 10px 15px;
+
+    background-color: #111;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+}
+
+#projects a:hover {
+    background-color: #333;
+}
+
+
+/* =========================
+   CONTACT SECTION
+   ========================= */
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+#contact input,
+#contact textarea {
+    padding: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font-family: Arial, sans-serif;
+}
+
+#contact textarea {
+    min-height: 120px;
+}
+
+#contact button {
+    margin-top: 10px;
+    padding: 12px;
+
+    background-color: #111;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #333;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    padding: 25px;
+
+    background-color: #111;
+    color: white;
+
+    text-align: center;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav div {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #hero h1 {
+        font-size: 40px;
+    }
+
+    #about,
+    #skills,
+    #projects,
+    #contact {
+        padding: 50px 20px;
+    }
+
+    #projects > div {
+        grid-template-columns: 1fr;
+    }
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.social-links a {
+    padding: 10px 20px;
+
+    background-color: #111;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.social-links a:hover {
+    background-color: #333;
+}
